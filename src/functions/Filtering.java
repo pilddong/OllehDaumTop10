@@ -2,7 +2,6 @@ package functions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -16,11 +15,12 @@ public class Filtering {
 	        while (scan.hasNext()) {
 	            filter.add(scan.next());
 	        }		
+	        scan.close();
 	        check = true;
 		}
 	}
 	
-	public static HashSet<String> filteringList() {
+	public HashSet<String> filteringList() {
         return filter;
     }
 	
